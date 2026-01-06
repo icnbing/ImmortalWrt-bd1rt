@@ -156,8 +156,9 @@ TARGET_DEVICES += bendian_bd-one" >> target/linux/rockchip/image/armv8.mk
 
 # 复制 02_network 网络配置文件到 target/linux/rockchip/armv8/base-files/etc/board.d/ 目录下
 cp -f $GITHUB_WORKSPACE/configfiles/board.d/02_network target/linux/rockchip/armv8/base-files/etc/board.d/02_network
-# 复制 bd_fan 风扇控制及配置文件到 target/linux/rockchip/armv8/base-files/etc/init.d/ 目录下
+# 复制 bd_fan 风扇控制及配置文件到 target/linux/rockchip/armv8/base-files/etc/ 目录下
 cp -f $GITHUB_WORKSPACE/configfiles/init.d/bd_fan target/linux/rockchip/armv8/base-files/etc/init.d/bd_fan
+mkdir -p target/linux/rockchip/armv8/base-files/etc/config
 cp -f $GITHUB_WORKSPACE/configfiles/config/bd_fan target/linux/rockchip/armv8/base-files/etc/config/bd_fan
 
 # 复制dts设备树文件到指定目录下
