@@ -1,4 +1,4 @@
-name: ImmortalWrt-g16
+name: ImmortalWrt-bd1rt
 
 on:
   workflow_dispatch:
@@ -6,15 +6,15 @@ on:
     - cron: 0 20 * * *
 
 env:
-  REPO_URL: https://github.com/zhoufuli/immortalwrt-rk356x
-  REPO_BRANCH: main
-  CONFIG_FILE: configs/g16-plus-docker.config
+  REPO_URL: https://github.com/immortalwrt/immortalwrt
+  REPO_BRANCH: openwrt-24.10
+  CONFIG_FILE: configs/bd-one-docker.config
   DIY_SCRIPT: diy-mini.sh
   CLASH_KERNEL: arm64
   CACHE_TOOLCHAIN: true
   UPLOAD_BIN_DIR: false
   FIRMWARE_RELEASE: true
-  FIRMWARE_TAG: immortalwrt-g16
+  FIRMWARE_TAG: immortalwrt-bd1rt
   TZ: Asia/Shanghai
   GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 
