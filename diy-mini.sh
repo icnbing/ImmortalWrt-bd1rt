@@ -166,6 +166,10 @@ cp -f $GITHUB_WORKSPACE/configfiles/dts/rk3568-bendian-bd-one.dts target/linux/r
 cp -f $GITHUB_WORKSPACE/configfiles/dts/rk3568-bendian-bd-one.dts package/boot/uboot-rockchip/src/arch/arm/dts/rk3568-bendian-bd-one.dts
 cp -f $GITHUB_WORKSPACE/configfiles/dts/rk3568-bendian-bd-one-u-boot.dtsi package/boot/uboot-rockchip/src/arch/arm/dts/rk3568-bendian-bd-one-u-boot.dtsi
 
+cp -f $GITHUB_WORKSPACE/configfiles/Makefile_boot package/boot/uboot-rockchip/Makefile
+cp -f $GITHUB_WORKSPACE/configfiles/bendian-bd-one-rk3568_defconfig package/boot/uboot-rockchip/src/configs/bendian-bd-one-rk3568_defconfig
+
+cp -f $GITHUB_WORKSPACE/configfiles/900-arm64-boot-add-dts-files.patch target/linux/rockchip/patches-6.6/900-arm64-boot-add-dts-files.patch
 # samba解除root限制
 # sed -i 's/invalid users = root/#&/g' feeds/packages/net/samba4/files/smb.conf.template
 
